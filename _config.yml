@@ -1,4 +1,9 @@
-title: IT-блог
+#블로그 제목
+title: tigero456
+
+#부제
+tagline: tech blog
+
 description: > # this means to ignore newlines until "baseurl:"
   Blog with theme Future Imperfect<br>
 baseurl: "https://tigero456.github.io/" # the subpath of your site, e.g. /blog
@@ -26,9 +31,3 @@ lang: ko
 
 #시간대 설정
 timezone: Asia/Seoul
-
-#블로그 제목
-title: tigero456
-
-#부제
-tagline: tech blog
