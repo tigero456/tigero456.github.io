@@ -1,7 +1,7 @@
 title: IT-блог
 description: > # this means to ignore newlines until "baseurl:"
   Blog with theme Future Imperfect<br>
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://tigero456.github.io/" # the subpath of your site, e.g. /blog
 url: "https://future-imperfect.kaptn.ru" # the base hostname & protocol for your site, e.g. http://example.com
 
 
@@ -21,4 +21,14 @@ markdown: kramdown
 
 permalink: /:categories/:year/:title.html
 
+#언어
+lang: ko
 
+#시간대 설정
+timezone: Asia/Seoul
+
+#블로그 제목
+title: tigero456
+
+#부제
+tagline: tech blog
