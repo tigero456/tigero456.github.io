@@ -26,9 +26,3 @@ lang: ko
 
 #시간대 설정
 timezone: Asia/Seoul
-
-#블로그 제목
-title: tigero456
-
-#부제
-tagline: tech blog
