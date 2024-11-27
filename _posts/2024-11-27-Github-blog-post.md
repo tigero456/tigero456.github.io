@@ -15,22 +15,21 @@ last_modified_at: 2024-11-27
 ---
 **Markdown** 사용방법
 {: .message }
-<br/>
 
-### 1. 제목
+## Header
 #### 제목
 ##### 제목
 ###### 제목
 
 <br/>
 
-### 2. 목록
+## 목록
 - 항목 1
 - 항목 2
 
 <br/>
 
-### 3. 링크
+## 링크
 [google](https://google.com)<br/>
 [naver](https://naver.com)<br/>
 문서 내 [참조 링크] 사용가능<br/>
@@ -38,12 +37,12 @@ last_modified_at: 2024-11-27
 [참조 링크]: https://tigero456.github.io
 <br/>
 
-### 4. 인용문
-Text
+## 인용문
+> Text
 
 <br/>
 
-### 5. 강조
+## 강조
 normal<br/>
 <mark>highlight</mark><br/>
 **Bold**<br/>
@@ -53,17 +52,17 @@ _Italic_<br/>
 
 <br/>
 
-### 6. 줄바꿈
+## 줄바꿈
 줄<br/>바<br/>꿈
 
 <br/>
 
-### 7. 수평선
+## 수평선
 
 ---
 <br/>
 
-### 8. 코드블럭
+## 코드블럭
 ```java
 public class A {
     public static void main(String[] args) {
@@ -73,7 +72,7 @@ public class A {
 ```
 <br/>
 
-### 9. 표
+## 표
 
 | 좌측정렬 | 가운데정렬 | 우측정렬 |
 | :-- | :--: | --: |
@@ -81,7 +80,7 @@ public class A {
 | 4 | 5 | 6 |
 | 7 | 8 | 9 |
 
-### 10. 이미지
+## 이미지
 ![Github image](/image/github.png)
 
 <br/><br/><br/><br/><br/><br/>
