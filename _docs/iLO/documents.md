@@ -1,6 +1,6 @@
 ---
 title: Documents
-category: Media
+category: iLO
 order: 3
 ---
 
