@@ -1,138 +1,212 @@
-# Future Imperfect Theme on Jekyll
->by [Kapitonenko](https://kaptn.ru)
+# Not Pure Poole <!-- omit in toc -->
 
-<https://future-imperfect.kaptn.ru> - demo  
-<https://github.com/kaptn3/future-imperfect/> - repository
+<a href="https://jekyll-themes.com">
+  <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" >
+</a>
 
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/)
-![Future Imperfect Theme preview](https://cdn.rawgit.com/kaptn3/blog/4ccc6d6a/readme_files/screen.png)
+**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Content management](#content-management)
-    - [Template](#template)
-    - [Example of post](#example-of-post)
-    - [Category page](#category-page)
-4. [Features](#features)
-    - [Categories](#categories)
-    - [Comments](#comments)
-    - [Icons](#icons)
-    - [Post Image](#post-image)
-    - [Featured image](#featured-image)
-    - [Edit link](#edit-link)
-    - [Web analytics](#web-analytics)
-5. [Upgrading Theme](#upgrading-theme)
-6. [Thanks to the following](#thanks-to-the-following)
-7. [Todo](#todo)
-8. [Donate](#donate)
-9. [Copyright and license](#copyright-and-license)
+> Poole explains that Jekyll has been asking for a particular chemical for days now but every time it has been fetched for him he rejects it as **not pure**. Poole also explains that he caught a glimpse of the man inside and he looked barely human.
+>
+> -- <a href="https://www.bbc.co.uk/bitesize/guides/zbtjnrd/revision/6"><cite>The death of Jekyll</cite></a>
 
-## Installation 
-1. Download, clone or fork repo `git clone git@github.com:kaptn3/blog.git`
-2. Enter the folder: `cd blog/` 
-3. Start Jekyll server: `jekyll s`
+-----
 
-Access, [localhost:4000](http://localhost:4000)
+See Not Pure Poole in action with [the demo site](https://vszhub.github.io/not-pure-poole/).
 
-## Usage
-If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
+![Screenshot](screenshot.png)
 
-If you have any questions please ask me at [GitHub Issues](https://github.com/kaptn3/future-imperfect/issues).
+## Table of Contents <!-- omit in toc -->
 
-## Content management
-### Template
-Template of posts setting is in `_drafts/template.md`. `Layout` is always named `post`. `Title` is a title of post, writing in quotation marks. `Date` written in the following format: `yyyy-mm-dd hh:mm`. In `category` specifies one category. In `icon` written the name of icon (its in the folder `images`). In `tags` is possible to write multiple tags using a comma. In `image` specify the path to image preview (can not fill). And in `preview` you can write `0` to on the main page didn't show the announcement of the post. 
-
-More details about all features and setting can be view on [here](#features).
-
-### Example of post
-```
-layout: post
-title:  "Lorem"
-date:   2017-06-04 00:00
-category: category_name
-icon: git
-keywords: tag1, tag2
-image: 1.png
-preview: 0
-```
-
-### Category page
-If you want to add a page of category you have to create folder with name of category and file `index.html`, which should contain the following:  
-```
----
-layout: default
-title: Category1
-permalink: /category1/ 
----
-
-{% include category.html %}
-```
-
-You can see example in [here](https://github.com/kaptn3/future-imperfect/blob/master/category1) or [here](https://github.com/kaptn3/blog/blob/master/category2).
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Configuration](#configuration)
+  - [Customizing Head](#customizing-head)
+  - [Creating Themes](#creating-themes)
+  - [Customizing Navigation](#customizing-navigation)
+  - [Customizing Cover Image](#customizing-cover-image)
+  - [Customizing Social Links](#customizing-social-links)
+  - [Enabling Posts Archive](#enabling-posts-archive)
+  - [Enabling TOC](#enabling-toc)
+  - [Enabling MathJax](#enabling-mathjax)
+  - [Something More](#something-more)
+- [Development](#development)
+- [License](#license)
 
 ## Features
-### Categories
-In blog page, we categorize posts into several categories by url, all category pages use same template html file - `_includes/category.html`. Links of category in menu is in `_data.links.yml`.
 
-For example: URL is `localhost:4000/category1`. In `_data.links.yml` we define this category named category1, so in `_includes/category.html` we get this URL(/category1/) and change it to my category(category1), then this page are posts about category1.
+- [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag)
+- [Jekyll Feed](https://github.com/jekyll/jekyll-feed)
+- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
+- [Jekyll Gist](https://github.com/jekyll/jekyll-gist)
+- [Google Analytics](https://analytics.google.com/)
+- [Disqus](https://disqus.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [MathJax](https://www.mathjax.org/)
+- Dark mode (enabled automatically via CSS media query)
+- Posts archive by dates, categories, and tags
+- Pagination, generated by [Jekyll Paginate](https://github.com/jekyll/jekyll-paginate)
+- TOC (generated by Vladimir "allejo" Jimenez's [jekyll-toc](https://github.com/allejo/jekyll-toc))
+- Related posts (time-based, because Jekyll) below each post
+- Mobile friendly design and development
+- Easily scalable text and component sizing with `rem` units in the CSS
+- Support for a wide gamut of HTML elements
+- Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
 
-### Comments
-I use [HyperComments](http://hypercomments.com) instead of other tool, Disqus, so it's slower and don't allows to anonymously send messages. Code of comment is in `_includes/comments` and it included in every post.
+## Installation
 
-### Icons
-For categories I use svg-icons in `images`. Еhe icon is automatically assigned to the post by its category. The icon name must be `category_name.svg`.
+You can choose one of the following methods to install Not Pure Poole:
 
-### Post Image
-All images used in posts that are in `post-image` and its are categorized. For example, images in post of category1's category is in `post-img/category1`. 
+- Directly specify the `not-pure-poole` gem.
 
-### Featured image
-You can specify the preview image for post in [YAML Front Matter](http://jekyllrb.com/docs/frontmatter/). In front matter called "image" to indicate the name of the image. The picture must be located in a category folder.    
-For example, we write post of category_name's category. In folder `post-img/category_name` put the preview image with the title "1.png" and in front matter write: `image: 1.png`. [Example](https://github.com/kaptn3/future-imperfect/blob/master/_posts/2017-06-08-learn-git4.md).
+    1. Add `gem 'not-pure-poole'` into your `Gemfile`.
+    2. Add the below lines into your `_config.yml`.
 
-Also, in front matter you can control the announcement of record post. By default, the announcement consists of 35 words. Writing in the front matter called "preview" the number 0, the announcement will not be displayed for this entry. [Example](https://github.com/kaptn3/blog/blob/master/_posts/2017-06-08-learn-git4.md).
+        ```yml
+        plugins:
+          - not-pure-poole
+        ```
 
-### Edit link
-All posts can be edited by users through link: `github.com/kaptn3/future-imperfect/edit/master/{{ page.path }}` or `github.com/kaptn3/blog/edit/master/{{ post.path }}`. 
+- If your site is hosted on GitHub Pages, you can use [`jekyll-remote-theme`](https://github.com/benbalter/jekyll-remote-theme) to import the master branch of Not Pure Poole.
 
-### Web analytics
-I use [Yandex Metrika](https://metrika.yandex.ru) to do web analytics, you can choose either to realize it, just paste your code in `includes/analytics.html`.
+    1. Add `gem 'jekyll-remote-theme'` into your `Gemfile`.
+    2. Add the below lines into your `_config.yml`.
 
-## Upgrading Theme
-Blog is always being improved by its users, so sometimes one may need to upgrade.
+        ```yml
+        plugins:
+          - jekyll-remote-theme
 
-Ensure there's an upstream remote
+        remote_theme: vszhub/not-pure-poole
+        ```
 
-If `git remote -v` doesn't have an upstream listed, you can do the following to add it:
+## Usage
 
-`git remote add upstream https://github.com/kaptn3/future-imperfect.git`
-Pull in the latest changes
+You can read this [example post](https://vszhub.github.io/not-pure-poole/2020/09/29/welcome-to-not-pure-poole/) to see the rendering result in this theme, and put the [source](_posts/2020-09-29-welcome-to-not-pure-poole.md) aside to learn some basic usages.
 
-`git pull upstream master`
-There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
+### Configuration
 
-## Thanks to the following
-[Jekyll](http://jekyllrb.com/)  
-[HTML5Up](https://html5up.net/)  
-[Font Awesome](http://fontawesome.io/icons/)  
-[HyperComments](http://hypercomments.com)
+The [`_config.yml`](_config.yml) file in this repository already contains some variables, you can try to override them in your repository.
 
-## TODO
-- [ ] Add 404 page
-- [ ] Search system
-- [x] Add fontawesome 5
-- [ ] Add paginator
+### Customizing Head
 
-## Donate
-In `includes/donate.html` you'll see form for donation, includes in every post.  
-Also if this project let you enjoy your blog time, you can give me a cup of coffee :)
+Not Pure Poole leaves a placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons. All you need to do is just creating a file `_includes/custom-head.html` and put data into it.
 
-[Donate =)](https://money.yandex.ru/to/410013162271067/10)
+### Creating Themes
 
-## Copyright and license
-The theme is taken Future Imperfect Theme from [HTML5 UP](https://html5up.net).
+If you want to make your own color schemes, modify the CSS variables in the `_sass/_variables.scss` stylesheet with a scoped data attribute or class name.
 
-It is under [the MIT license](/LICENSE).
+For example, below we've created the beginnings of a blue theme:
 
-Enjoy :yum:
+```scss
+// Example blue theme
+[data-theme="blue"] {
+  --body-bg: var(--blue);
+  --body-color: #fff;
+}
+```
+
+Then, apply the theme by adding `data-theme="blue"` to the `<html>` element.
+
+### Customizing Navigation
+
+You can create a file `_data/navigation.yml` to configure links to some pages. For example,
+
+```yml
+- title: Blog
+  url: /
+- title: About
+  url: /about/
+```
+
+### Customizing Cover Image
+
+You can set your own cover image by modifying the `cover_image` variable in `_config.yml`, and you can also set different cover images on different pages by setting the `cover_image` variable on each page.
+
+If you discover that the contrast between the cover text color and the cover background color is not enough, you can also adjust these two variables:
+
+```yml
+cover_bg_color: rgb(40, 73, 77)
+cover_color: rgb(255, 255, 255)
+```
+
+### Customizing Social Links
+
+You can set your social links in `_data/social.yml`. You can custom titles, URLs, and icons (only support [Font Awesome](https://fontawesome.com/) currently), for example:
+
+```yml
+- title: Email
+  url: mailto://vszhub@gmail.com
+  icon: fas fa-envelope
+- title: Twitter
+  url: https://twitter.com/vszhub
+  icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/vszhub/not-pure-poole
+  icon: fab fa-github
+```
+
+### Enabling Posts Archive
+
+Not Pure Poole supports posts archive by date, categories, and tags. For enabling that, you should put some data like below into `_data/archive.yml`:
+
+```yml
+- type: dates
+  title: Dates
+  url: /dates/
+- type: categories
+  title: Categories
+  url: /categories/
+- type: tags
+  title: Tags
+  url: /tags/
+```
+
+After that, the navigation to these archive pages would be shown on the top of the homepage.
+
+Then, you can create a category archive page, and set the below parameters on that page:
+
+```yml
+---
+layout: archive-taxonomies
+type: categories
+---
+```
+
+Or a tag archive page:
+
+```yml
+layout: archive-taxonomies
+type: tags
+```
+
+Or archive by dates:
+
+```yml
+layout: archive-dates
+```
+
+### Enabling TOC
+
+If you want to show the TOC of a page on the right side, just set `toc: true` on that page.
+
+### Enabling MathJax
+
+If you want to write mathematics on a page, just set `math: true` on that page to enable MathJax.
+
+### Something More
+
+Just **hack** into the code and see what you can get.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `not-pure-poole.gemspec` accordingly.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

@@ -1,33 +1,45 @@
 ---
 layout: default
 ---
-<!-- Post -->
-{% for post in site.posts %} 
-  <article class="post">
-    <header>
-      <div class="title">
-      <span class="image left image-icon"><a href="{{ post.url | relative_url }}"><img src="{{ site.baseurl}}/images/{{ post.icon }}.svg" style="width: 4em;" alt="{{ post.icon }}"></a></span>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-      </div>
-      <div class="meta">
-        <time class="published" datetime="{{ post.date }}">{{ post.date | date: "%d %b %Y %R" }}</time>
-        <a href="{{ site.author.cv }}" class="author"><span class="name">V.{{ site.author.last_name }}</span><img src="{{ site.author.avatar | prepend: site.baseurl }}" alt="VKapitonenko" /></a>
-      </div>
-    </header>
-    {% if post.image %}
-      <a href="{{ post.url | relative_url }}" class="image featured"><img src="/post-img/{{ post.category }}/{{ post.image }}" alt="{{ post.title }}"></a>
-    {% endif %}
-    {% if post.preview != 0 %}
-      <p>{{ post.content | truncatewords: 35 }}</p>
-    {% endif %}
-    <footer> 
-      <ul class="actions">
-        <li><a href="{{ post.url | relative_url }}" class="button big">Читать Далее</a></li>
-      </ul>
-      <ul class="stats">
-        <li><a class="icon" href="{{ site.baseurl }}/{{ post.category }}"><i class="fas fa-fw fa-folder"></i> {{ post.category }}</a></li>
-        <li><a href="//github.com/ViKapitoshka/blog/edit/master/{{ page.path }}" class="icon"><i class="fas fa-fw fa-edit"></i> Edit</a></li>
-      </ul>
-    </footer>
-  </article>
-{% endfor %}
+
+{% include home-header.html %}
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <section class="post-entry">
+    <h2 class="post-title">
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    <div class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+      {%- if jekyll.environment == "production" and site.disqus -%}
+        <span> • </span>
+        <a class="comment-count" href="{{ post.url | relative_url }}#disqus_thread">
+          <span class="disqus-comment-count" data-disqus-url="{{ post.url | absolute_url }}"></span>
+        </a>
+      {%- endif -%}
+    </div>
+
+    <p>{{ post.excerpt | strip_html }}</p>
+  </section>
+  {% endfor %}
+  {%- if jekyll.environment == "production" and site.disqus -%}
+    <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
+  {%- endif -%}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
