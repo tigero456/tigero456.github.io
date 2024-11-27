@@ -13,7 +13,9 @@ toc_sticky: true
 date: 2024-11-27
 last_modified_at: 2024-11-27
 ---
-**Markdown** 사용방법{: .message }<br/>
+**Markdown** 사용방법
+{: .message }
+<br/>
 
 ### 1. 제목
 #### 제목
