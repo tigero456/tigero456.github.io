@@ -13,7 +13,6 @@ toc_sticky: true
 date: 2024-11-27
 last_modified_at: 2024-11-27
 ---
- 마크다운 문법을 이용해 md파일을 작성하여 Github blog에 포스팅 해보자.
 <br/>
 
 ### 1. 제목
