@@ -1,6 +1,6 @@
 ---
-title: Facebook
-category: Contact Syncing
+title: 명령어
+category: Linux
 order: 1
 ---
 
