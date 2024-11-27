@@ -1,6 +1,6 @@
 ---
-title: Phone
-category: Contact Syncing
+title: Trouble Shooting
+category: Linux
 order: 2
 ---
 
