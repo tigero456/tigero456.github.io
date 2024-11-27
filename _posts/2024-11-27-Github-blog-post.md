@@ -13,7 +13,7 @@ toc_sticky: true
 date: 2024-11-27
 last_modified_at: 2024-11-27
 ---
-<br/>
+**Markdown** 사용방법{: .message }<br/>
 
 ### 1. 제목
 #### 제목
@@ -43,6 +43,7 @@ Text
 
 ### 5. 강조
 normal<br/>
+<mark>highlight</mark><br/>
 **Bold**<br/>
 _Italic_<br/>
 <u>underline</u><br/>
@@ -52,6 +53,7 @@ _Italic_<br/>
 
 ### 6. 줄바꿈
 줄<br/>바<br/>꿈
+
 <br/>
 
 ### 7. 수평선
@@ -79,3 +81,5 @@ public class A {
 
 ### 10. 이미지
 ![Github image](/image/github.png)
+
+<br/><br/><br/><br/><br/><br/>
