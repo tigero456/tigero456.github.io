@@ -13,25 +13,26 @@ toc_sticky: true
 date: 2024-11-27
 last_modified_at: 2024-11-27
 ---
-### 마크다운 문법을 이용해 md파일을 작성하여 Github blog에 포스팅 해보자.
+ 마크다운 문법을 이용해 md파일을 작성하여 Github blog에 포스팅 해보자.
 <br/>
 
-### 제목
+### 1. 제목
 > #### 제목
 > ##### 제목
 > ###### 제목
+
 <br/>
 
-### 목록
+### 2. 목록
 > - 항목 1
 > - 항목 2
 
 <br/>
 
-### 링크
-> [google](https://google.com)
-[naver](https://naver.com)
-문서 내 [참조 링크] 사용가능
+### 3. 링크
+> [google](https://google.com)<br/>
+[naver](https://naver.com)<br/>
+문서 내 [참조 링크] 사용가능<br/>
 
 [참조 링크]: https://tigero456.github.io
 <br/>
@@ -42,10 +43,10 @@ last_modified_at: 2024-11-27
 <br/>
 
 ### 강조
-> normal
-**Bold**
-_Italic_
-<u>underline</u>
+> normal<br/>
+**Bold**<br/>
+_Italic_<br/>
+<u>underline</u><br/>
 ~~LineThrough~~
 
 <br/>
@@ -71,6 +72,7 @@ public class A {
 <br/>
 
 ### 표
+
 | 열1 | 열2 | 열3 |
 | --: | :-- |:--:|
 | 행1 | --: | 우측 정렬 |
@@ -80,4 +82,4 @@ public class A {
 </br>
 
 ### 이미지
-![Github image](.image\github.png)
+![Github image](/image/github.png)
