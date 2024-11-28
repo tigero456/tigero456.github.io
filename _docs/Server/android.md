@@ -1,6 +1,6 @@
 ---
-title: Android
-category: Devices
+title: OS
+category: Server
 order: 2
 ---
 
