@@ -1,6 +1,6 @@
 ---
-title: Images
-category: Media
+title: IML log
+category: iLO
 order: 1
 ---
 
