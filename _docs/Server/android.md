@@ -1,7 +1,7 @@
 ---
 title: OS
 category: Server
-order: 2
+order: 1
 ---
 
 Use ChatApp on all of your Android devices. Every version is supported.
