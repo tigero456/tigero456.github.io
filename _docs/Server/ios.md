@@ -1,6 +1,6 @@
 ---
-title: iOS
-category: Devices
+title: Hardware
+category: Server
 order: 1
 ---
 
