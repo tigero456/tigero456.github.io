@@ -1,6 +1,6 @@
 ---
-title: Video
-category: Media
+title: Event log
+category: iLO
 order: 2
 ---
 
