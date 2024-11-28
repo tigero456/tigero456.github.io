@@ -1,5 +1,5 @@
 ---
-title: Documents
+title: Status
 category: iLO
 order: 3
 ---
