@@ -2,6 +2,9 @@
 title: MultiPath
 category: Linux
 order: 1
+
+tags:
+    - [linux, multipath]
 ---
 
 ### 멀티패스란
@@ -9,7 +12,6 @@ order: 1
 **하나의 저장소**가 컴퓨터에서 **여러개로 인식**되는 상황에서 그것들을 다시 **하나로 만들어주는 기능**
 
 ![MultiPath Image1](/images/multipath.png "구성 예시")
-
   
 위와 같이 연결되어 스토리지에서 서버에 볼륨을 할당해주면 서버는 총 4개의 path로 해당 스토리지 볼륨을 조회하게 된다.  
 동일 볼륨을 4가지 경로로 바라복 되는 것이다.
