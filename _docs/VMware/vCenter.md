@@ -11,4 +11,5 @@ vCenter는 하나의 VM으로 존재하며, 요즘은 VMware에서 자체 개발
 vCenter Server를 통해 모니터링에 대한 가시성을 얻을 수 있고, VMware에서 권장하는 다양한 기능을 사용할 수 있게 된다.
 VMware ESXi가 속한 vSphere 제품군과는 별개의 제품으로 별도 비용이 필요한 서비스이다.
 
-또한, HA, DRS, vMotion, Clone 등 ESXi에서 지원하지 않는 고급 기능을 지원한다.
+또한 HA, DRS, vMotion, Clone 등 ESXi에서 지원하지 않는 고급 기능을 지원한다.
+
