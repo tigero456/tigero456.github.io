@@ -1,5 +1,5 @@
 ---
-title: Status
+title: status
 category: iLO
 order: 3
 ---
