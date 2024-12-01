@@ -1,16 +1,28 @@
 ---
-title: General fixes and improvements
+title: 운동일지
 type: minor
 ---
+## 2024  
+**A. 3분할**  
+    1. 가슴, 전측면어깨, 삼두
+    2. 등, 측후면어깨, 이두
+    3. 하체  
 
-This release fixes a few minor issues reported by users. We've also made a few quality of life improvements.
-
-**Features:**
-
-* Streamlined access to contact details
-* Better sort order for archived messages
-
-**Fixes:**
-
-* Input sometimes getting stuck
-* One more memory leak obliterated
+**B. 4분할+2분할**  
+    1. 가슴, 등  
+    2. 어깨  
+    3. 이두, 삼두  
+    4. 하체  
+    5. 가슴, 등, 어깨  
+    6. 이두, 삼두, 하체  
+  
+**11월 4주 B**  
+11.25 (월)    B.1 가슴/등  
+11.26 (화)    B.2 어깨  
+11.27 (수)    X  
+11.28 (목)    X  
+11.29 (금)    B.5 가슴/등/어깨  
+11.30 (토)    B.6 이두/삼두/하체  
+12.01 (일)    유산소  
+  
+**12월 1주 B**  

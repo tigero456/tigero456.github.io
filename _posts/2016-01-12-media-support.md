@@ -1,5 +1,5 @@
 ---
-title: Media support
+title: 기상
 type: major
 ---
 
