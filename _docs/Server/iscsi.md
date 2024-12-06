@@ -37,3 +37,18 @@ SCSI 프로토콜을 인터넷 프로토콜을 사용해 전송하는 기술
             - portal 등록 : iscsi/[target iqn이름]/tpg1/portals/ create [ip주소] [포트(기본값 3260)]
             - portal 삭제 : iscsi/[target iqn이름]/tpg1/portals/ delete [ip주소] [포트]
  
+   
+### Target 서버 구축
+iSCSI Target 데몬과 관련 패키지 설치 & 데몬 활성화  
+
+    ▶ targetcli 설치
+       # yum install targetcli
+
+    ▶ target 데몬 enable 후 활성화
+       # systemctl enable --now target
+
+    ▶ target 데몬 상태 확인
+       # systemctl is-active target
+
+  
+### Initator 서버 구축
