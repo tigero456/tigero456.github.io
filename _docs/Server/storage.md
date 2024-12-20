@@ -11,7 +11,6 @@ order: 4
 (1) Fibre Channel  
 - 주로 SAN (스토리지 영역 네트워크)에서 스토리지 장치를 연결하는 데 사용되는 고속 네트워킹 기술을 의미한다.  
   
-(2) FCoE (Fibre Channel over Ethernet)  
 - FCoE는 Fibre Channel 프로토콜을 이더넷 네트워크에서 전송할 수 있도록 해주는 기술이다. 기존의 Fibre Channel 스토리지 네트워크를 이더넷 기반의 데이터 네트워크로 통합하여 효율성을 높인 기술이다.  
   
 (3) iSCSI (Internet Small Computer Systems Interface)  
